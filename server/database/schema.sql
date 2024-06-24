@@ -11,7 +11,7 @@ create table item (
   foreign key(user_id) references user(id)
 );
 create table category (
-  id int  primary key auto_increment not null,
+  id int primary key auto_increment not null,
   name varchar(255) not null
 );
 
