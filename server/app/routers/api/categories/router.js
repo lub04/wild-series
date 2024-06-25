@@ -3,16 +3,15 @@ const express = require("express");
 const router = express.Router();
 
 /* ************************************************************************* */
-// Import And Use Routers Here
+// Define Your API Routes Here
 /* ************************************************************************* */
 
-const itemsRouter = require("./items/router");
-const programRouter = require("./programs/router");
-const categoryRouter = require("./categories/router");
+// Import item-related actions
+const { browse } = require("../../../controllers/categoryActions");
 
-router.use("/items", itemsRouter);
-router.use("/programs", programRouter);
-router.use("/categories", categoryRouter);
+// Route to get a list of items
+router.get("/", browse);
+
 /* ************************************************************************* */
 
 module.exports = router;
